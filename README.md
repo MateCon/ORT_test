@@ -1,1 +1,1 @@
-Primer repositiorio para una clase de ORT
+Primer repositiorio para una clase de ORT.
