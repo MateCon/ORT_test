@@ -4,10 +4,6 @@ const port: number = 8080;
 
 app.use(express.static('public'));
 
-app.get('/', (_, res: Response) => {
-    res.status(200).send('hello world!');
-});
-
 app.get('/user/:name', (req: Request, res: Response) => {
     const params = req.params;
     res.status(200).send(params.name);
