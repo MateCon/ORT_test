@@ -1,15 +1,16 @@
- {
+{
     "env": {
-        "node": true,
-        "commonjs": true
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
     },
     "extends": [
         "eslint:recommended",
         "prettier"
     ],
-    "plugins": [
-        "prettier"
-    ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
     "rules": {
         "indent": ["error", 4],
         "prettier/prettier": "error"
