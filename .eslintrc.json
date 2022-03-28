@@ -1,0 +1,17 @@
+ {
+    "env": {
+        "node": true,
+        "commonjs": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "prettier"
+    ],
+    "plugins": [
+        "prettier"
+    ],
+    "rules": {
+        "indent": ["error", 4],
+        "prettier/prettier": "error"
+    }
+}
