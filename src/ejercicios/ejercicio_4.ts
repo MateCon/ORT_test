@@ -13,11 +13,19 @@ export const ej_1 = (n: number) => {
     return count;
 };
 
-export const ej_1_v2 = (n: number) =>
-    Math.floor(n / 4) - Math.floor(n / 100) + Math.floor(n / 400);
+const roundDiv = (a: number, b: number) => Math.floor(a / b);
 
-// console.log(ej_1(2050));
-// console.log(ej_1_v2(2050));
+export const ej_1_v2 = (n: number, curr: number) =>
+    n > curr
+        ? roundDiv(n - curr, 4) -
+          roundDiv(n - curr, 100) +
+          roundDiv(n - curr, 400)
+        : 0;
+
+console.log(ej_1(2050));
+console.log(ej_1_v2(2022 + 2050, 2022));
+
+console.log(ej_1_v2(2020, 2022));
 
 export interface Carta {
     num: number;
