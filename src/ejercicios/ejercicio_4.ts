@@ -22,24 +22,22 @@ export const ej_1_v2 = (n: number, curr: number) =>
           roundDiv(n - curr, 400)
         : 0;
 
-console.log(ej_1(2050));
-console.log(ej_1_v2(2022 + 2050, 2022));
-
-console.log(ej_1_v2(2020, 2022));
+// console.log(ej_1(2050));
+// console.log(ej_1_v2(2022 + 2050, 2022));
+// console.log(ej_1_v2(2020, 2022));
 
 export interface Carta {
     num: number;
     color: 'red' | 'black';
 }
 
+const colores: ('red' | 'black')[] = ['black', 'black', 'red', 'red'];
+
 const generarMazo = (): Carta[] => {
     let mazo: Carta[] = [];
-    for (let i = 1; i < 13; i++) {
-        mazo.push({ num: i, color: 'black' });
-        mazo.push({ num: i, color: 'black' });
-        mazo.push({ num: i, color: 'red' });
-        mazo.push({ num: i, color: 'red' });
-    }
+    for (let i = 1; i < 13; i++)
+        for (let color of colores)
+            mazo.push({ num: i, color });
     return mazo;
 };
 
