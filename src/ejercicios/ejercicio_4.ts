@@ -45,10 +45,9 @@ export const ej_2 = () => {
     const mazo: Carta[] = generarMazo();
     let count = 0;
 
-    for (let carta of mazo) {
+    for (let carta of mazo)
         if (carta.num <= 10 && carta.num % 2 === 0 && carta.color === 'black')
             count++;
-    }
 
     return count;
 };
