@@ -56,16 +56,22 @@ export const ej_2 = () => {
 
 export const ej_3 = () => {
     const mazo: Carta[] = generarMazo();
+    let count = 0;
     let sum = 0;
 
     for (let i = 0; i < 1000; i++) {
         const copy: Carta[] = [...mazo];
         for (let i = 0; i < 6; i++)
             copy.splice(Math.floor(Math.random() * mazo.length), 1);
-        for (let card of copy) sum += card.num;
+        for (let card of copy) {
+            if(card.num > 1 && card.num <= 10) {
+                sum += card.num;
+                count++;
+            }
+        }
     }
 
-    return sum / 52000;
+    return sum / count;
 };
 
-// console.log(ej_3());
+console.log(ej_3());
