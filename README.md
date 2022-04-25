@@ -1,3 +1,5 @@
-Primer repositiorio para una clase de ORT.
+# Primer repositiorio para una clase de ORT.
 
-https://github.com/jmguillen76/ortrepo01
+## LINK al TP1
+
+https://github.com/MateCon/EFSI-TP1
